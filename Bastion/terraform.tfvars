@@ -1,0 +1,6 @@
+pip_name           = "bstion-pip"
+location           = "eastus"
+rgname             = "shivesh_RG1"
+bastion_name       = "shivesh-bastion"
+bastionsubnet_name = "AzureBastionSubnet"
+vnet_name          = "shivesh-vnet"
