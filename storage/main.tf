@@ -10,6 +10,6 @@ resource "azurerm_storage_account" "storageaccount" {
 
 resource "azurerm_storage_container" "container" {
   name                  = "terraform"
-  storage_account_name  = azurerm_storage_account.storageaccount[each.key].name
+  storage_account_name  = azurerm_storage_account.storageaccount.name
   container_access_type = "private"
 }
