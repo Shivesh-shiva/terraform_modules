@@ -43,7 +43,6 @@ resource "azurerm_windows_virtual_machine" "example1" {
   size                            = each.value.size
   admin_username                  = data.azurerm_key_vault_secret.sec1.value
   admin_password                  = data.azurerm_key_vault_secret.sec2.value
-  disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.nic[each.key].id,
   ]
