@@ -35,7 +35,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "example" {
+resource "azurerm_linux_virtual_machine" "example1" {
   for_each                        = var.virtual_machine
   name                            = each.value.vmname
   resource_group_name             = var.rgname
