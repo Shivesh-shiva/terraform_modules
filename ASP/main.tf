@@ -1,6 +1,5 @@
 data "azurerm_resource_group" "rg" {
   name = var.rgname
-  location = var.location
 }
 
 resource "azurerm_service_plan" "ASP" {
