@@ -26,13 +26,6 @@ resource "azurerm_network_interface" "nic" {
   name                = each.value.nic_name
   location            = each.value.location
   resource_group_name = var.rgname
-
-  ip_configuration {
-    name                          = "internal"
-    subnet_id                     = data.azurerm_subnet.vn1.id
-    private_ip_address_allocation = "Dynamic"
-
-  }
 }
 
 resource "azurerm_linux_virtual_machine" "example" {
